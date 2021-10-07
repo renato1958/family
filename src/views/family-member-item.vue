@@ -1,17 +1,26 @@
 <template>
-  <h2>{{ membro.cognome }} {{ membro.nome }}</h2>
+  <h2>{{ member.cognome }} {{ member.nome }}</h2>
+  <h3>Nato il {{ member.dNascita }} (età: {{ age }} anni)</h3>
+  <h3>Professione: {{ member.prof }}</h3>
 </template>
 
 <script>
-import membri from "../backend/members";
+import members from "../backend/members";
 export default {
   name: "FamilyMemberItem",
-  data() {
-    return {membri}
-  },
   computed: {
-    membro() {
-      return membri.find((mb) => mb.id === this.$route.params.id);
+    member() {
+      return members.find((mb) => mb.id === this.$route.params.id);
+    },
+    age() {
+      let member = members.find((mb) => mb.id === this.$route.params.id);
+      let dNascita = member.dNascita.split("/").reverse().join("-");
+      const oggi = new Date();
+      const age = Math.floor(
+        (oggi - new Date(dNascita)) / (1000 * 60 * 60 * 24 * 365)
+      );
+
+      return age;
     },
   },
 };

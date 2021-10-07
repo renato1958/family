@@ -1,6 +1,6 @@
 export default [
   {
-    id: 1,
+    id: "1",
     cognome: "F****i",
     nome: "Renato",
     sesso: "M",
@@ -8,7 +8,7 @@ export default [
     prof: "Medico Chirurgo"
   },
   {
-    id: 2,
+    id: "2",
     cognome: "R*****i",
     nome: "Patrizia",
     sesso: "F",
@@ -16,7 +16,7 @@ export default [
     prof: "Pensionata"
   },
   {
-    id: 3,
+    id: "3",
     cognome: "F....i",
     nome: "Alessandro",
     sesso: "M",
