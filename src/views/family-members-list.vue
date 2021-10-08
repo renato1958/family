@@ -1,12 +1,13 @@
 <template>
   <h1>Famiglia Felisi</h1>
-  <h3 v-for="membro in membri" :key="membro.id">
+  <div v-for="membro in membri" :key="membro.id">
     <router-link
+      class="membro"
       :to="`/membri/${membro.cognome.toLowerCase()}-${membro.nome.toLowerCase()}`"
     >
-      {{ membro.nome }}
+      <h3 class="membro">{{ membro.nome }}</h3>
     </router-link>
-  </h3>
+  </div>
 </template>
 
 <script>
@@ -19,3 +20,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.membro,
+.membro:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+.membro:hover {
+  color: red;
+}
+</style>
