@@ -1,7 +1,7 @@
 export default [
   {
     id: "1",
-    cognome: "F****i",
+    cognome: "Felisi",
     nome: "Renato",
     sesso: "M",
     dNascita: "21/12/1958",
@@ -9,7 +9,7 @@ export default [
   },
   {
     id: "2",
-    cognome: "R*****i",
+    cognome: "Rossoni",
     nome: "Patrizia",
     sesso: "F",
     dNascita: "13/10/1961",
@@ -17,7 +17,7 @@ export default [
   },
   {
     id: "3",
-    cognome: "F....i",
+    cognome: "Felisi",
     nome: "Alessandro",
     sesso: "M",
     dNascita: "20/07/1996",
