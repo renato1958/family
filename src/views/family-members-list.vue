@@ -23,6 +23,7 @@ export default {
 
 <style scoped>
 .membro,
+.membro:link,
 .membro:active,
 .membro:visited {
   color: blue;
